@@ -1,7 +1,7 @@
 //module.exports = () => {
   // ...
   //}
-
+//LECTURA DE RUTA DESDE LÍNEA DE COMANDO
 console.log("Ingresa ruta");
 let pathToken = process.argv[2];
 if (pathToken){

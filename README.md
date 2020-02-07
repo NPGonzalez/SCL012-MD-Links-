@@ -33,7 +33,7 @@ algunas estadísticas.
 
 ## 2. Diagrama de Flujo
 
-![Aplicación](images/diagFlujo.jpg)
+![Aplicación](images/DiagFlujo.jpg)
 
 ## 2. Resumen del proyecto
 

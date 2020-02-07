@@ -12,3 +12,6 @@ if (pathToken){
 }else{
   console.log("No ingrese ruta vacía");
 }
+// LECTURA CURRENT WORKING DIRECTORY
+let data = process.cwd();
+console.log(data);

@@ -4,9 +4,10 @@
 
 //ALMACENAMIENTO DE PATH
 let pathAbsRel = process.argv[2];
-
-// VALIDACIÓN DE PATH
-if(pathToken === undefined){
+// FUNCIÓN mdLinks(path)
+const mdlinks = (pathToken) =>{
+  // VALIDACIÓN DE PATH
+  if(pathToken === undefined){
   console.log('ingrese ruta')}
   else{  
   //ALMACENAMIENTO DEL ACTUAL DIRECTORIO DE TRABAJO
@@ -20,3 +21,6 @@ if(pathToken === undefined){
   };
     readPath(absolutePathToken);
   };
+  }
+  
+  mdlinks(pathAbsRel);

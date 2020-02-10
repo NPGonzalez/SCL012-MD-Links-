@@ -15,7 +15,7 @@ const mdlinks = (pathToken) => {
     // FUNCIÓN QUE IMPRIME ARCHIVOS QUE SE ENCUENTRAN EN EL CURRENT WORKING DIRECTORY
     fs.readdir(relativePath, (err, files) => {
       files.forEach((file) => {
-        console.log(file);
+        console.log(path.extname(file));
       });
     });
   } else {
@@ -24,7 +24,7 @@ const mdlinks = (pathToken) => {
     const readPath = (pathName) => {
       if (path.extname(pathName) === '.md') {
         console.log(pathName);
-   
+       
       } else {
         console.log('Ingrese archivo con extensión .md');
       }

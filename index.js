@@ -9,25 +9,25 @@ let pathAbsRel = process.argv[2];
 const mdlinks = (pathToken) =>{
   // VALIDACIÓN DE PATH
   if(pathToken === undefined){
-  console.log('ingrese ruta')}
-  else{  
-  //ALMACENAMIENTO DEL ACTUAL DIRECTORIO DE TRABAJO
-  let relativePath = process.cwd();
-  
-  // IMPRIME EXTENSIÓN DEL ARCHIVO INGRESADO
-  const path = require('path');
-  console.log(path.extname(pathAbsRel));
-
-  //TRANSFORMACIÓN A RUTA ABSOLUTA
-  //let absolutePathToken = relativePath + '\\' + pathToken;
-  let absolutePathToken = path.resolve(pathToken);
-
-    const readPath = (pathName) =>{
-  //SE MUESTRA RUTA ABSOLUTA...(
-  console.log(pathName);
+    console.log('ingrese ruta')}
+    else{
+      //ALMACENAMIENTO DEL ACTUAL DIRECTORIO DE TRABAJO
+      let relativePath = process.cwd();
+      // IMPRIME EXTENSIÓN DEL ARCHIVO INGRESADO
+      const path = require('path');
+      //TRANSFORMACIÓN A RUTA ABSOLUTA
+      let absolutePathToken = path.resolve(pathToken);
+      const readPath = (pathName) =>{
+        if(path.extname(pathName) === '.md'){
+          console.log(pathName);
+        } else{
+          console.log("Ingrese archivo con extensión .md");
+        }
+        //SE MUESTRA RUTA ABSOLUTA...
+        
   };
-    readPath(absolutePathToken);
+  readPath(absolutePathToken);
   };
-  }
+  };
   
   mdlinks(pathAbsRel);

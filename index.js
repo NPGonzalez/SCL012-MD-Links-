@@ -1,14 +1,16 @@
 // //module.exports = () => {
 //  ...
 // }
-// ALMACENAMIENTO DE PATH
 
+// ALMACENAMIENTO DE PATH
 const pathAbsRel = process.argv[2];
+const optionValidate = process.argv[3];
 const path = require('path');
 const fs = require('fs');
 // FUNCIÓN mdLinks(path)
 const mdlinks = (pathToken) => {
-// VALIDACIÓN DE PATH
+  // console.log(optionValidate);
+  // VALIDACIÓN DE PATH
   if (pathToken === undefined) {
     // console.log('Ingrese ruta');
     const relativePath = process.cwd();
@@ -16,8 +18,8 @@ const mdlinks = (pathToken) => {
     fs.readdir(relativePath, (err, files) => {
       files.forEach((file) => {
         if (path.extname(file) === '.md') {
-          console.log(file);
-        };
+          mdlinks(file);
+        }
       });
     });
   } else {
@@ -25,8 +27,13 @@ const mdlinks = (pathToken) => {
     const absolutePathToken = path.resolve(pathToken);
     const readPath = (pathName) => {
       if (path.extname(pathName) === '.md') {
-        console.log(pathName);
-       
+        try{
+        console.log(absolutePathToken);
+      
+
+        }catch (err) {
+          console.error(err);
+        }
       } else {
         console.log('Ingrese archivo con extensión .md');
       }

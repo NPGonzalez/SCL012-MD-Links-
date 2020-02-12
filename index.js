@@ -18,6 +18,7 @@ const mdlinks = (pathToken) => {
     fs.readdir(relativePath, (err, files) => {
       files.forEach((file) => {
         if (path.extname(file) === '.md') {
+          // SE LLAMA A mdLinks() PARA ENCONTRAR RUTAS ABSOLUTAS DE ARCHIVOS .MD ENCONTRADOS EN EL CWD, SI RUTA VACÍA (RECURSIVIDAD) 
           mdlinks(file);
         }
       });

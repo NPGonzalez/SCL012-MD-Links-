@@ -29,7 +29,14 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
       Devuelve  por consola:
   -    Total de url's encontradas (Total)
   -    Total de url's únicas encontradas (Unique)
-  -    Total de url's rotas 
+  -    Total de url's rotas (Broken)
+
+
+ ![Reportes_1](images/Reportes.png)
+
+
+![Reportes_2](images/Reportes01.png) 
+
   
  Sin selección de las opciones anteriores.
 
@@ -39,19 +46,12 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
   -    href: url encontradas
   -    Text: texto que acompaña a url
   -    Line: número de línea dentro del archivo de procedencia
-
-![Ejemplo --validate](images/DiagFlujo.png)
-
-
-   
-
- 
-     
-
-      
-
-*
   
+
+ ![Reportes_3](images/Reportes02.png)
+
+
+![Reportes_4](images/Reportes03.png) 
 
 ## Alcances de mdLinks
 [1] Lee sólo archivos con extensión ".md"

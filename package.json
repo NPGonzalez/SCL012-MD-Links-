@@ -1,12 +1,13 @@
 {
   "name": "md-links",
   "version": "0.1.0",
-  "description": "This is a package to read and analyze the url's in a .md files",
-  "main": "md-links.js",
-  "bin": "cli.js",
+  "description": "This is a package to read and analyze the url'sin a .md files",
+  "main": "index.js",
+  "bin": {
+    "mdLinks": "index.js"
+  },
   "directories": {
-    "test": "./test",
-    "bin": "./bin"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "chalk": "^3.0.0",
@@ -20,7 +21,7 @@
     "jest": "^25.1.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "Jest"
   },
   "repository": {
     "type": "git",

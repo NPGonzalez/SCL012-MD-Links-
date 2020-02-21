@@ -43,6 +43,7 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
 ![Reportes](images/Reportes.png)
 
 
+![Reportes](images/Reportes01.png)
   
 
 ## Alcances de mdLinks

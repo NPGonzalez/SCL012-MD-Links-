@@ -1,13 +1,15 @@
 {
-  "name": "md-links-analyze",
-  "version": "0.1.1",
+  "name": "md-links",
+  "version": "0.1.0",
   "description": "This is a package to read and analyze the url's in a .md files",
-  "main": "index.js",
-  "bin": {
-    "mdLinks": "./index.js"
-  },
+  "main": "md-links.js",
+  "bin": "cli.js",
+  // "bin": {
+  //   "mdLinks": "./index.js"
+  // },
   "directories": {
-    "test": "test"
+    "test": "./test",
+    "bin": "./bin"
   },
   "dependencies": {
     "chalk": "^3.0.0",

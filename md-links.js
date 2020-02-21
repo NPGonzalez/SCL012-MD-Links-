@@ -111,3 +111,15 @@ const pathValidation = (pathToken, optionOne, optionTwo) => {
 };
 
 
+// FUNCIÓN MDLINKS
+const mdLinks = (pathToken, optionOne, optionTwo) => {
+  return new Promise((resolve, reject) => {
+    if (pathToken !== undefined) {
+      resolve(pathValidation(pathToken, optionOne, optionTwo));
+    } else {
+      reject(console.log('La opción ingresada no es válida'));
+    }
+  });
+};
+
+module.exports.mdLinks = mdLinks;

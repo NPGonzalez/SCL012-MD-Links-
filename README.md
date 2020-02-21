@@ -7,48 +7,48 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
 #### Argumentos
 
 * `path`: Ruta absoluta o relativa al archivo o actual directorio ( _current working directory_).
-* `options`: Un objeto con las siguientes propiedades:
+* `options`: 
 
-     `--validate`: 
-  
+    `--validate`: 
     Devuelve por consola un listado con:
   
-  -     File: ruta absoluta del archivo .md que se leyó, 
-  -     href: url encontrada
-  -     Status: "ok" o "failed"
-  -     Status Code: código de status - destacando en rojo las url's rotas - 
-  -     Text: texto que acompaña a url
-  -     Line: número de línea dentro del archivo de procedencia
-  -     Se destaca en color rojo aquellas url's que no están rotas
+  -    File: ruta absoluta del archivo .md que se leyó, 
+  -    href: url encontrada
+  -    Status: "ok" o "failed"
+  -    Status Code: código de status - destacando en rojo las url's rotas - 
+  -    Text: texto que acompaña a url
+  -    Line: número de línea dentro del archivo de procedencia
+  -    Se destaca en color rojo aquellas url's que no están rotas
+    `-- stats`: 
+     Devuelve  por consola:
+  -    Total de url's encontradas (Total)
+  -    Número de url's únicas encontradas (Unique)
+    `--validate` `--stats`:
+      Devuelve  por consola:
+  -    Total de url's encontradas (Total)
+  -    Total de url's únicas encontradas (Unique)
+  -    Total de url's rotas 
+  
+ Sin selección de las opciones anteriores.
+
+  Devuelve por consola un listado con:
+  
+  -    File: ruta absoluta del archivo .md que se leyó, 
+  -    href: url encontradas
+  -    Text: texto que acompaña a url
+  -    Line: número de línea dentro del archivo de procedencia
 
 ![Ejemplo --validate](images/DiagFlujo.png)
 
 
+   
 
+ 
+     
 
+      
 
-
-
-  `-- stats`: 
-
-     Devuelve  por consola:
-  -     Total de url's encontradas (Total)
-  -     Número de url's únicas encontradas (Unique)
-  `--validate` `--stats`:  :  
-
-    Devuelve  por consola:
-  -     Total de url's encontradas (Total)
-  -     Total de url's únicas encontradas (Unique)
-  -     Total de url's rotas     
-
-* Sin selección de las opciones anteriores.
-
-  Devuelve por consola un listado con:
-  
-  -     File: ruta absoluta del archivo .md que se leyó, 
-  -     href: url encontradas
-  -     Text: texto que acompaña a url
-  -     Line: número de línea dentro del archivo de procedencia
+*
   
 
 ## Alcances de mdLinks
@@ -69,7 +69,7 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
 
 ### Modo de empleo 
 * Para instalar la librería desde la terminal, situada en el directorio de tu proyecto,escribe el siguiente comando
-$npm install --save https://github.com/npgonzalez/SCL012-MD-links-
+$npm install https://github.com/npgonzalez/SCL012-MD-links-
 (Si deseas que la instalación sea global, agrega '-g' al final del comando anterior)
 * Para obtener los links, escribe el comando:
 

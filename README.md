@@ -19,10 +19,12 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
   -    Text: texto que acompaña a url
   -    Line: número de línea dentro del archivo de procedencia
   -    Se destaca en color rojo aquellas url's que no están rotas
+
     `-- stats`: 
      Devuelve  por consola:
   -    Total de url's encontradas (Total)
   -    Número de url's únicas encontradas (Unique)
+  
     `--validate` `--stats`:
       Devuelve  por consola:
   -    Total de url's encontradas (Total)
@@ -73,7 +75,7 @@ $npm install https://github.com/npgonzalez/SCL012-MD-links-
 (Si deseas que la instalación sea global, agrega '-g' al final del comando anterior)
 * Para obtener los links, escribe el comando:
 
-  $md-Links < ruta de tu archivo>
+   $md-Links < ruta de tu archivo>
 
 * Para usar la opción "--validate" escribe lo siguiente:
 

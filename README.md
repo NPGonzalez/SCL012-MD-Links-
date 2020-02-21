@@ -70,18 +70,22 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
 ### Modo de empleo 
 * Para instalar la librería desde la terminal, situada en el directorio de tu proyecto,escribe el siguiente comando
 $npm install --save https://github.com/npgonzalez/SCL012-MD-links-
-Seguidamente escribe el siguiente comando para obtener los links:
+(Si deseas que la instalación sea global, agrega '-g' al final del comando anterior)
+* Para obtener los links, escribe el comando:
 $md-Links < ruta de tu archivo>
-Para hacer uso de la opción "--validate" escribe lo siguiente:
+
+* Para usar la opción "--validate" escribe lo siguiente:
 $md-links < ruta de tu archivo> --validate
-Para hacer uso de la opción "--stats" escribe lo siguiente:
+
+* Para usar la opción "--stats" escribe lo siguiente:
 $md-links < ruta de tu archivo> --validate
-Para hacer uso de las opciones "--validate y "--stats", al mismo tiempo escribe lo siguiente:
+
+* Para usar las opciones "--validate y "--stats", al mismo tiempo escribe lo siguiente:
 $md-links < ruta de tu archivo> --validate --stats
 
-Si quieres analizar todos tus archivos .md existentes entu directorio actual no ingreses el path; de igual modo, sí puedes usar las opciones antes mencionadas
+* Si quieres analizar todos tus archivos .md existentes en tu directorio actual no ingreses el path; de igual modo, sí puedes usar las opciones antes mencionadas
 
-Si deseas que la instalación sea global, agrega '-g' al final.
+
 
 ## Próxima Versión
 En la próxima versión se espera incluir testeo  de las funciones.

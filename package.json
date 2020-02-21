@@ -4,9 +4,6 @@
   "description": "This is a package to read and analyze the url's in a .md files",
   "main": "md-links.js",
   "bin": "cli.js",
-  // "bin": {
-  //   "mdLinks": "./index.js"
-  // },
   "directories": {
     "test": "./test",
     "bin": "./bin"

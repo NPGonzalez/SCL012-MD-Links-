@@ -1,6 +1,6 @@
 {
   "name": "md-links-analyze",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This is a package to read and analyze the url's in a .md files",
   "main": "index.js",
   "bin": {
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NPGonzalez/SCL012-MD-Links-.git"
+    "url": "git+https://github.com/NPGonzalez/SCL012-MD-Links-/tree/master.git"
   },
   "keywords": [
     "markdown",
@@ -38,7 +38,7 @@
   "author": "Nayarett González",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NPGonzalez/SCL012-MD-Links-/issues"
+    "url": "https://github.com/NPGonzalez/SCL012-MD-Links-/tree/master/issues"
   },
-  "homepage": "https://github.com/NPGonzalez/SCL012-MD-Links-#readme"
+  "homepage": "https://github.com/NPGonzalez/SCL012-MD-Links-/tree/master#readme"
 }

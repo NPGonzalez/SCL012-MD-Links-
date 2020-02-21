@@ -1,11 +1,12 @@
 {
-  "name": "md-links",
+  "name": "md-links-status",
   "version": "0.1.0",
   "description": "This is a package to read and analyze the url'sin a .md files",
   "main": "index.js",
-  "bin": {
-    "mdLinks": "index.js"
-  },
+  "bin": "cli.js",
+  //  {
+  //   "mdLinks": "index.js"
+  // },
   "directories": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

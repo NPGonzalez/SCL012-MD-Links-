@@ -88,3 +88,26 @@ const readPath = (pathName) => {
     console.log('Ingrese archivo con extensión .md');
   }
 };
+
+// FUNCIÓN QUE VALIDA PATH
+const pathValidation = (pathToken, optionOne, optionTwo) => {
+  const noFile = '';
+  if (pathToken === noFile || pathToken === './') {
+    const relativePath = process.cwd();
+    // FUNCIÓN QUE BUSCA ARCHIVOS "".md" QUE SE ENCUENTRAN EN EL CURRENT WORKING DIRECTORY
+    fs.readdir(relativePath, (err, files) => {
+      files.forEach((file) => {
+        if (path.extname(file) === '.md') {
+          // RECURSIVIDAD
+          pathValidation(file, optionOne, optionTwo);
+        }
+      });
+    });
+  } else {
+    // TRANSFORMACIÓN A RUTA ABSOLUTA
+    const absolutePathToken = path.resolve(pathToken);
+    readPath(absolutePathToken);
+  }
+};
+
+

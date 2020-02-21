@@ -40,17 +40,9 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
   -    Text: texto que acompaña a url
   -    Line: número de línea dentro del archivo de procedencia
 
-![Ejemplo --validate](images/DiagFlujo.png)
+![Reportes](images/Reportes.png)
 
 
-   
-
- 
-     
-
-      
-
-*
   
 
 ## Alcances de mdLinks

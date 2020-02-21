@@ -29,7 +29,7 @@ mdLinks(path, options), es una librería que busca y analiza, en archivos con ex
       Devuelve  por consola:
   -    Total de url's encontradas (Total)
   -    Total de url's únicas encontradas (Unique)
-  -    Total de url's rotas 
+  -    Total de url's rotas (Broken)
 
 
  ![Reportes_1](images/Reportes.png)

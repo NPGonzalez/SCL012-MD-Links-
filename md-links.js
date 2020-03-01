@@ -18,7 +18,7 @@ const readPath = (pathName) => {
     let u = 0;
 
     const linkComplete = [];
-    console.log(chalk.red('******************************************************************************************************************************************************'));
+
     try {
       // LECTURA DE ARCHIVO POR LÍNEA
       fs.readFileSync(pathName).toString().split('\n').forEach(
@@ -98,7 +98,10 @@ const readPath = (pathName) => {
                     }
                   });
                 // NO SE INGRESAN OPCIONES
-              } else if (argv.validate !== true && argv.stats !== true) {
+              } else if (argv.validate !== true && argv.stats !== true) {    
+                if (j === 1) {
+                  console.log(chalk.red('******************************************************************************************************************************************************'));
+                }
                 console.log(`${j}${'  '}${'File: '}${chalk.blue(linkAndUrlFoundedElements[2])}${'  '}${'Line '}${i}${':'}${'  '}${'href: '}${chalk.yellow(linkAndUrlFoundedElements[0])}${'  '}${'Text: '}${chalk.green(linkAndUrlFoundedElements[1])}`);
               }
             }

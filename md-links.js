@@ -85,16 +85,6 @@ const readPath = (pathName) => {
                           }
                         }
                         console.log(`${'Unique:'}${' '}${m - u}`);
-                        for (let f = 0; f <= m; f += 1) {
-                          for (let q = f + 1; q <= m; q += 1) {
-                            if (linkComplete[f] !== 0) {
-                              if (linkComplete[f] === linkComplete[q]) {
-                                linkComplete[q] = 0;
-                                u += 1;
-                              }
-                            }
-                          }
-                        }
                         console.log(`${'Broken:'}${' '}${n}`);
                       }
                     }

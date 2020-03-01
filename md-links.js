@@ -16,6 +16,7 @@ const readPath = (pathName) => {
     let l = 0;
     let m = 0;
     let u = 0;
+    let n = 0;
 
     const linkComplete = [];
 
@@ -44,6 +45,7 @@ const readPath = (pathName) => {
                       linkAndUrlFoundedElements.push(statusUrl);
                     } else if (res.status > 399) {
                       const statusUrl = 'fail';
+                      n += 1;
                       linkAndUrlFoundedElements.push(statusUrl);
                     }
                     l += 1; j -= 1;
@@ -83,12 +85,26 @@ const readPath = (pathName) => {
                           }
                         }
                         console.log(`${'Unique:'}${' '}${m - u}`);
-                        console.log(`${'Broken:'}${' '}${k}`);
+                        for (let f = 0; f <= m; f += 1) {
+                          for (let q = f + 1; q <= m; q += 1) {
+                            if (linkComplete[f] !== 0) {
+                              if (linkComplete[f] === linkComplete[q]) {
+                                linkComplete[q] = 0;
+                                u += 1;
+                              }
+                            }
+                          }
+                        }
+                        console.log(`${'Broken:'}${' '}${n}`);
                       }
                     }
                     // OPCIÓN VALIDATE EN CASO DE QUE TODAS LAS URL'S ESTÉN OK
                     if (argv.validate === true && argv.stats !== true) {
-                      console.log(`${l}${'  '}${'File: '}${chalk.blue(linkAndUrlFoundedElements[2])}${'  '}${'href: '}${chalk.green(linkAndUrlFoundedElements[0])}${'  '}${'Line: '}${chalk.blue.bold(linkAndUrlFoundedElements[3])}${'  '}${'Status: '}${chalk.green.bold(linkAndUrlFoundedElements[4])}${'  '}${'Status code: '}${chalk.green(res.status)}${'  '}${'Text: '}${chalk.yellow(linkAndUrlFoundedElements[1])}`);
+                      if(linkAndUrlFoundedElements[4] === 'fail') {
+                        console.log(`${l}${'  '}${'File: '}${chalk.red(linkAndUrlFoundedElements[2])}${'  '}${'href: '}$ {chalk.red(linkAndUrlFoundedElements[0])}${'  '}${'Line: '}${chalk.red.bold(linkAndUrlFoundedElements[3])}${'  '}${'Status: '}${chalk.red.bold(linkAndUrlFoundedElements[4])}${'  '}${'Status code: '}${chalk.red(res.status)}${'  '}${'Text: '}${chalk.red(linkAndUrlFoundedElements[1])}`);
+                      } else {
+                        console.log(`${l}${'  '}${'File: '}${chalk.blue(linkAndUrlFoundedElements[2])}${'  '}${'href: '}${chalk.green(linkAndUrlFoundedElements[0])}${'  '}${'Line: '}${chalk.blue.bold(linkAndUrlFoundedElements[3])}${'  '}${'Status: '}${chalk.green.bold(linkAndUrlFoundedElements[4])}${'  '}${'Status code: '}${chalk.green(res.status)}${'  '}${'Text: '}${chalk.yellow(linkAndUrlFoundedElements[1])}`);
+                      }
                     }
                   }).catch((error) => {
                     k += 1;
@@ -98,7 +114,7 @@ const readPath = (pathName) => {
                     }
                   });
                 // NO SE INGRESAN OPCIONES
-              } else if (argv.validate !== true && argv.stats !== true) {    
+              } else if (argv.validate !== true && argv.stats !== true) {
                 if (j === 1) {
                   console.log(chalk.red('******************************************************************************************************************************************************'));
                 }

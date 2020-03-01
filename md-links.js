@@ -101,7 +101,7 @@ const readPath = (pathName) => {
                     // OPCIÓN VALIDATE EN CASO DE QUE TODAS LAS URL'S ESTÉN OK
                     if (argv.validate === true && argv.stats !== true) {
                       if(linkAndUrlFoundedElements[4] === 'fail') {
-                        console.log(`${l}${'  '}${'File: '}${chalk.red(linkAndUrlFoundedElements[2])}${'  '}${'href: '}$ {chalk.red(linkAndUrlFoundedElements[0])}${'  '}${'Line: '}${chalk.red.bold(linkAndUrlFoundedElements[3])}${'  '}${'Status: '}${chalk.red.bold(linkAndUrlFoundedElements[4])}${'  '}${'Status code: '}${chalk.red(res.status)}${'  '}${'Text: '}${chalk.red(linkAndUrlFoundedElements[1])}`);
+                        console.log(`${l}${'  '}${'File: '}${chalk.red(linkAndUrlFoundedElements[2])}${'  '}${'href: '}${chalk.red(linkAndUrlFoundedElements[0])}${'  '}${'Line: '}${chalk.red.bold(linkAndUrlFoundedElements[3])}${'  '}${'Line: '}${chalk.red.bold(linkAndUrlFoundedElements[3])}${'  '}${'Status: '}${chalk.red.bold(linkAndUrlFoundedElements[4])}${'  '}${'Status code: '}${chalk.red(res.status)}${'  '}${'Text: '}${chalk.red(linkAndUrlFoundedElements[1])}`);
                       } else {
                         console.log(`${l}${'  '}${'File: '}${chalk.blue(linkAndUrlFoundedElements[2])}${'  '}${'href: '}${chalk.green(linkAndUrlFoundedElements[0])}${'  '}${'Line: '}${chalk.blue.bold(linkAndUrlFoundedElements[3])}${'  '}${'Status: '}${chalk.green.bold(linkAndUrlFoundedElements[4])}${'  '}${'Status code: '}${chalk.green(res.status)}${'  '}${'Text: '}${chalk.yellow(linkAndUrlFoundedElements[1])}`);
                       }

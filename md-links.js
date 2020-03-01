@@ -1,4 +1,3 @@
-
 // #!/usr/bin/env node
 // ALMACENAMIENTO DE PATH
 const argv = require('minimist')(process.argv.slice(2));
@@ -6,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const fetch = require('node-fetch');
 const chalk = require('chalk');
+
 
 const readPath = (pathName) => {
   if (path.extname(pathName) === '.md') {
@@ -15,6 +15,9 @@ const readPath = (pathName) => {
     let k = 0;
     let l = 0;
     let m = 0;
+    let u = 0;
+
+    const linkComplete = [];
     console.log(chalk.red('******************************************************************************************************************************************************'));
     try {
       // LECTURA DE ARCHIVO POR LÍNEA
@@ -23,10 +26,12 @@ const readPath = (pathName) => {
           const regex = /(?<=\[).+?(?=\])|((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/gi;
           // BÚSQUEDA DE LINK Y URL CORRESPONDIENTE
           i += 1;
+          let s = 0;
           const linkAndUrlFounded = line.match(regex);
           if (linkAndUrlFounded !== null) {
             const linkAndUrlFoundedElements = (linkAndUrlFounded);
             if (linkAndUrlFoundedElements[1] !== undefined && linkAndUrlFoundedElements[0] !== ' ') {
+              linkComplete[j] = linkAndUrlFoundedElements[1];
               (linkAndUrlFoundedElements.reverse()).push(pathName);
               linkAndUrlFoundedElements.push(i);
               j += 1;
@@ -48,7 +53,17 @@ const readPath = (pathName) => {
                         console.log(chalk.red('******************************************************************************************************************************************************'));
                         console.log(path.basename(linkAndUrlFoundedElements[2]));
                         console.log(`${'Total:'}${' '}${m}`);
-                        console.log(`${'Unique:'}${' '}${l + k}`);
+                        for (let f = 0; f <= m; f += 1) {
+                          for (let q = f + 1; q <= m; q += 1) {
+                            if (linkComplete[f] !== 0) {
+                              if (linkComplete[f] === linkComplete[q]) {
+                                linkComplete[q] = 0;
+                                u += 1;
+                              }
+                            }
+                          }
+                        }
+                        console.log(`${'Unique:'}${' '}${m - u}`);
                       }
                     }
                     // OPCIÓN VALIDATE Y STATS
@@ -57,7 +72,17 @@ const readPath = (pathName) => {
                         console.log(chalk.red('******************************************************************************************************************************************************'));
                         console.log(path.basename(linkAndUrlFoundedElements[2]));
                         console.log(`${'Total:'}${' '}${m}`);
-                        console.log(`${'Unique:'}${' '}${m - j + k}`);
+                        for (let f = 0; f <= m; f += 1) {
+                          for (let q = f + 1; q <= m; q += 1) {
+                            if (linkComplete[f] !== 0) {
+                              if (linkComplete[f] === linkComplete[q]) {
+                                linkComplete[q] = 0;
+                                u += 1;
+                              }
+                            }
+                          }
+                        }
+                        console.log(`${'Unique:'}${' '}${m - u}`);
                         console.log(`${'Broken:'}${' '}${k}`);
                       }
                     }

@@ -20,6 +20,8 @@ md-links(path, options), es una librería que busca y analiza, en archivos con e
   -    Line: número de línea dentro del archivo de procedencia
   -    Se destaca en color rojo aquellas url's que no están rotas
 
+    ![Reportes_2](images/Reportes02.png)
+
     `-- stats`:
      Devuelve  por consola:
   -    Total de url's encontradas (Total)
@@ -31,11 +33,7 @@ md-links(path, options), es una librería que busca y analiza, en archivos con e
   -    Total de url's únicas encontradas (Unique)
   -    Total de url's rotas (Broken)
 
-
- ![Reportes_1](images/Reportes.png)
-
-
-![Reportes_2](images/Reportes01.png)
+    ![Reportes_3](images/Reportes03.png)
 
 
  Sin selección de las opciones anteriores.
@@ -47,11 +45,8 @@ md-links(path, options), es una librería que busca y analiza, en archivos con e
   -    Text: texto que acompaña a url
   -    Line: número de línea dentro del archivo de procedencia
 
+ ![Reportes](images/Reportes01.png)
 
- ![Reportes_3](images/Reportes02.png)
-
-
-![Reportes_4](images/Reportes03.png)
 
 ## Alcances de md-links
 [1] Lee sólo archivos con extensión ".md"

@@ -36,16 +36,16 @@ md-links(path, options), es una librería que busca y analiza, en archivos con e
     ![Reportes_3](images/Reportes03.png)
 
 
- Sin selección de las opciones anteriores.
+  Sin selección de las opciones anteriores.
 
-  Devuelve por consola un listado con:
+    Devuelve por consola un listado con:
 
   -    File: ruta absoluta del archivo .md que se leyó,
   -    href: url encontradas
   -    Text: texto que acompaña a url
   -    Line: número de línea dentro del archivo de procedencia
 
- ![Reportes](images/Reportes01.png)
+    ![Reportes](images/Reportes01.png)
 
 
 ## Alcances de md-links

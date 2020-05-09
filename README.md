@@ -76,7 +76,7 @@ md-links(path, options), es una librería que busca y analiza, en archivos con e
 
 * Para usar la opción "--stats" escribe lo siguiente:
 
-  node mdlinks < ruta de tu archivo> --validate
+  node md-links < ruta de tu archivo> --validate
 
 * Para usar las opciones "--validate y "--stats", al mismo tiempo escribe lo siguiente:
 

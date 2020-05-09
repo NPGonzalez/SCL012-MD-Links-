@@ -1,11 +1,8 @@
 {
-    "name": "ng-mdlinks",
+    "name": "md-links",
     "version": "0.1.0",
     "description": "This is a package to read and analyze the url'sin a .md files",
-    "main": "mdLinks.js",
-    "bin": {
-        "md-links": "mdLinks.js"
-    },
+    "main": "index.js",
     "directories": {
         "test": "test"
     },

@@ -1,4 +1,4 @@
-# Proyecto SCL012-Markdown Links
+# Proyecto SCL012-MD-Links
 
 ## Librería [npgvmd-links](https://www.npmjs.com/package/npgvmd-links)
 

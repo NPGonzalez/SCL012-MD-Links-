@@ -1,6 +1,6 @@
 # Proyecto SCL012-Markdown Links
 
-## Librería md-links
+## Librería [npgvmd-links](https://www.npmjs.com/package/npgvmd-links)
 
 md-links(path, options), es una librería que busca y analiza, en archivos con extensión ".md" las url's existentes y el texto que les acompaña.
 

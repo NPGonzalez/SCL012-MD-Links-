@@ -1,54 +1,59 @@
 # Proyecto SCL012-Markdown Links
 
-## Librería md-links
+## Librería mdLinks
 
-md-links(path, options), es una librería que busca y analiza, en archivos con extensión ".md" las url's existentes y el texto que les acompaña.
+mdLinks(path, options), es una librería que busca y analiza, en archivos con extensión ".md" las url's existentes y el texto que les acompaña. 
 
 #### Argumentos
 
 * `path`: Ruta absoluta o relativa al archivo o actual directorio ( _current working directory_).
-* `options`:
+* `options`: 
 
-    `--validate`:
+    `--validate`: 
     Devuelve por consola un listado con:
-
-  -    File: ruta absoluta del archivo .md que se leyó,
+  
+  -    File: ruta absoluta del archivo .md que se leyó, 
   -    href: url encontrada
   -    Status: "ok" o "failed"
-  -    Status Code: código de status - destacando en rojo las url's rotas -
+  -    Status Code: código de status - destacando en rojo las url's rotas - 
   -    Text: texto que acompaña a url
   -    Line: número de línea dentro del archivo de procedencia
   -    Se destaca en color rojo aquellas url's que no están rotas
 
-    ![Reportes_2](images/Reportes02.png)
-
-    `-- stats`:
+    `-- stats`: 
      Devuelve  por consola:
   -    Total de url's encontradas (Total)
   -    Número de url's únicas encontradas (Unique)
-
+  
     `--validate` `--stats`:
       Devuelve  por consola:
   -    Total de url's encontradas (Total)
   -    Total de url's únicas encontradas (Unique)
   -    Total de url's rotas (Broken)
 
-    ![Reportes_3](images/Reportes03.png)
+
+ ![Reportes_1](images/Reportes.png)
 
 
-  Sin selección de las opciones anteriores.
+![Reportes_2](images/Reportes01.png) 
 
-    Devuelve por consola un listado con:
+  
+ Sin selección de las opciones anteriores.
 
-  -    File: ruta absoluta del archivo .md que se leyó,
+  Devuelve por consola un listado con:
+  
+  -    File: ruta absoluta del archivo .md que se leyó, 
   -    href: url encontradas
   -    Text: texto que acompaña a url
   -    Line: número de línea dentro del archivo de procedencia
+  
 
-    ![Reportes](images/Reportes01.png)
+ ![Reportes_3](images/Reportes02.png)
 
 
-## Alcances de md-links
+![Reportes_4](images/Reportes03.png) 
+
+## Alcances de mdLinks
 [1] Lee sólo archivos con extensión ".md"
 
 [2] Si no se escribe el "path", lee y analiza todos los archivos que se encuentren en el directorio donde se ejecuta.
@@ -57,30 +62,32 @@ md-links(path, options), es una librería que busca y analiza, en archivos con e
 ### Pre - requisitos
 #### - Tener instalado node.js
 ####  Instalar en el computador de forma global las siguientes librerías
-* $ npm install node-fetch -g
+* $ npm install node-fetch -g 
 * $ npm install chalk install chalk -g
 * $ npm install minimist -g
 
 ### Instalación de librería mdLinks
 
 
-### Modo de empleo
-
+### Modo de empleo 
+* Para instalar la librería desde la terminal, situada en el directorio de tu proyecto,escribe el siguiente comando
+$npm install https://github.com/npgonzalez/SCL012-MD-links-
+(Si deseas que la instalación sea global, agrega '-g' al final del comando anterior)
 * Para obtener los links, escribe el comando:
 
-   node md-links < ruta de tu archivo>
+   $md-Links < ruta de tu archivo>
 
 * Para usar la opción "--validate" escribe lo siguiente:
 
-  node md-links < ruta de tu archivo> --validate
+  $md-links < ruta de tu archivo> --validate
 
 * Para usar la opción "--stats" escribe lo siguiente:
 
-  node mdlinks < ruta de tu archivo> --validate
+  $md-links < ruta de tu archivo> --validate
 
 * Para usar las opciones "--validate y "--stats", al mismo tiempo escribe lo siguiente:
 
-  node md-links < ruta de tu archivo> --validate --stats
+  $md-links < ruta de tu archivo> --validate --stats
 
 * Si quieres analizar todos tus archivos .md existentes en tu directorio actual no ingreses el path; de igual modo, sí puedes usar las opciones antes mencionadas
 

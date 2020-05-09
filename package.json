@@ -1,6 +1,6 @@
 {
     "name": "md-links",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "This is a package to read and analyze the url'sin a .md files",
     "main": "index.js",
     "directories": {

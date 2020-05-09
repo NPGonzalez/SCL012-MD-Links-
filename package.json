@@ -1,44 +1,44 @@
 {
-  "name": "md-links",
-  "version": "0.1.0",
-  "description": "This is a package to read and analyze the url'sin a .md files",
-  "main": "index.js",
-  "bin": {
-    "mdLinks": "index.js"
-  },
-  "directories": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "chalk": "^3.0.0",
-    "minimist": "^1.2.0",
-    "node-fetch": "^2.6.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.1",
-    "jest": "^25.1.0"
-  },
-  "scripts": {
-    "test": "Jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NPGonzalez/SCL012-MD-Links-.git"
-  },
-  "keywords": [
-    "markdown",
-    ".md",
-    "link",
-    "links status",
-    "npm",
-    "library"
-  ],
-  "author": "Nayarett González",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NPGonzalez/SCL012-MD-Links-/issues"
-  },
-  "homepage": "https://github.com/NPGonzalez/SCL012-MD-Links-#readme"
+    "name": "ng-mdlinks",
+    "version": "0.1.0",
+    "description": "This is a package to read and analyze the url'sin a .md files",
+    "main": "mdLinks.js",
+    "bin": {
+        "md-links": "mdLinks.js"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "chalk": "^3.0.0",
+        "minimist": "^1.2.5",
+        "node-fetch": "^2.6.0"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.20.1",
+        "jest": "^25.1.0"
+    },
+    "scripts": {
+        "test": "Jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NPGonzalez/SCL012-MD-Links-.git"
+    },
+    "keywords": [
+        "markdown",
+        ".md",
+        "link",
+        "links status",
+        "npm",
+        "library"
+    ],
+    "author": "Nayarett González",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/NPGonzalez/SCL012-MD-Links-/issues"
+    },
+    "homepage": "https://github.com/NPGonzalez/SCL012-MD-Links-#readme"
 }
